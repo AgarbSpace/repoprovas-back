@@ -12,7 +12,7 @@ async function findUserById(id: number){
     if(!user){
         throw{
             type:"Not_Found",
-            message: "User does not exist"
+            message: "User does not"
         }
     }
 
