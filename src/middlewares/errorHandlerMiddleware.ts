@@ -4,7 +4,8 @@ export default function errorHandlerMiddleware(error, request: Request, response
 
     if(error.type === "Conflict"){
         console.log(error.message)
-        return response.sendStatus(409);
+        const message = error.message;
+        return response.status(409).send(message);
     }
 
     if(error.type === "Not_Found"){
